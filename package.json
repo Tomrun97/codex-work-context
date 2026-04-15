@@ -1,0 +1,40 @@
+{
+  "name": "codex-work-context",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Expose local Codex work conversations over MCP.",
+  "license": "MIT",
+  "author": "Thomas Thierry",
+  "homepage": "https://github.com/Tomrun974/codex-work-context#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tomrun974/codex-work-context.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tomrun974/codex-work-context/issues"
+  },
+  "keywords": [
+    "codex",
+    "mcp",
+    "developer-tools",
+    "work-context",
+    "llm-tools"
+  ],
+  "bin": {
+    "codex-work-context": "./bin/codex-work-context.mjs",
+    "codex-work-context-mcp": "./bin/mcp-server.mjs",
+    "codex-work-context-stdio": "./bin/mcp-stdio.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "node bin/mcp-server.mjs",
+    "export": "node bin/codex-work-context.mjs export"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.21.1",
+    "express": "^5.1.0",
+    "luxon": "^3.7.2",
+    "zod": "^3.25.76"
+  }
+}
